@@ -1,60 +1,43 @@
-import './Overview.scss'
+import React from "react";
+import "./../../styles/global.scss"; // Ensure styles are imported
 
-import FallbackImg from 'src/assets/img/jukeboxImage.png'
-import Disk from 'src/assets/svg/Disk.svg?react'
-
-import { useSelector } from 'react-redux'
-import { AudioPlayer, TrackList } from 'src/components'
-import { TrackInteractions } from 'src/components/track-list/TrackInteractions'
-import { selectCurrentTrack, selectNextTracks } from 'src/store/jukebox'
-
-export const Overview = () => {
-  const queuedTracks = useSelector(selectNextTracks)
-  const currentTrack = useSelector(selectCurrentTrack)
-
+const Overview: React.FC = () => {
   return (
-    <>
-      <div className="grid">
-        <div className="col-5 card">
-          <div className="song-desc">
-            <h2 className="song-title">
-              {currentTrack?.track.name ?? 'No Track'}
-            </h2>
-            <div className="song-info">
-              <span className="song-author">
-                {currentTrack?.track.artists
-                  .map((artist) => artist.name)
-                  .join(', ') ?? 'No Artist'}
-              </span>
-              <TrackInteractions track={currentTrack} />
-            </div>
-            <span className="song-rec">
-              Recommended by: {currentTrack?.recommended_by ?? 'Spotify'}
-            </span>
-          </div>
-          <AudioPlayer />
-        </div>
-
-        <div className="col-7">
-          <div className="disk">
-            <img
-              className="curr-song"
-              src={currentTrack?.track.album?.images[0].url ?? FallbackImg}
-              alt={currentTrack?.track.name}
-            />
-            <Disk />
-          </div>
-        </div>
+    <div className="admin-overview-container">
+      <h1 className="admin-title">Admin Overview</h1>
+      
+      <div className="stat-cards">
+        <div className="stat-card">Stat 1</div>
+        <div className="stat-card">Stat 2</div>
+        <div className="stat-card">Stat 3</div>
+        <div className="stat-card">Stat 4</div>
       </div>
 
-      <div className="grid">
-        <div className="col-12">
-          <div className="song-queue scrollbar">
-            <h2 className="song-queue__title">Next Up</h2>
-            <TrackList tracks={queuedTracks} />
-          </div>
-        </div>
+      <div className="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>John Doe</td>
+              <td>Active</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Jane Smith</td>
+              <td>Inactive</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
-    </>
-  )
-}
+    </div>
+  );
+};
+
+export default Overview;
