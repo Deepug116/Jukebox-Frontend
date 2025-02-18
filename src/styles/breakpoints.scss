@@ -1,0 +1,14 @@
+// Define common breakpoints
+$breakpoints: (
+  xs: 480px,
+  sm: 768px,
+  md: 1024px,
+  lg: 1280px
+);
+
+// Mixin to apply styles based on max-width breakpoints
+@mixin media-breakpoint-down($size) {
+  @media (max-width: map-get($breakpoints, $size)) {
+    @content;
+  }
+}
