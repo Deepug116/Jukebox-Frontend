@@ -1,0 +1,257 @@
+/*
+$theme-colors: (
+  [palette]: (
+    [variant]: (
+      [modifier]: '[color]'
+    )
+  )
+)
+
+:root {
+  --[token]__[palette]__[modifier]--[variant]: var(--[color]);
+}
+*/
+$theme-colors: (
+  primary: (
+    light: (
+      default: 'c-55',
+      on: 'c-100',
+    ),
+    dark: (   
+      default: 'c-60',
+      on: 'c-100',
+    ),
+  ),
+  secondary: (
+    light: (
+      default: 't-55',
+      on: 't-100',
+    ),
+    dark: (
+      default: 't-60',
+      on: 't-100',
+    ),
+  ),
+  error: (
+    light: (
+      default: 'r-55',
+      on: 'r-100',
+    ),
+    dark: (
+      default: 'r-60',
+      on: 'r-100',
+    ),
+  ),
+  warning: (
+    light: (
+      default: 'y-55',
+      on: 'y-100',
+    ),
+    dark: (
+      default: 'y-50',
+      on: 'y-100',
+    ),
+  ),
+  success: (
+    light: (
+      default: 'g-55',
+      on: 'g-100',
+    ),
+    dark: (
+      default: 'g-55',
+      on: 'g-100',
+    ),
+  ),
+  primary-contrast: (
+    light: (
+      default: 'c-40',
+      on: 'c-100',
+    ),
+    dark: (
+      default: 'c-80',
+      on: 'c-10',
+    ),
+  ),
+  secondary-contrast: (
+    light: (
+      default: 't-15',
+      on: 't-100',
+    ),
+    dark: (
+      default: 't-80',
+      on: 't-10',
+    ),
+  ),
+  error-contrast: (
+    light: (
+      default: 'r-40',
+      on: 'r-100',
+    ),
+    dark: (
+      default: 'r-80',
+      on: 'r-20',
+    ),
+  ),
+  warning-contrast: (
+    light: (
+      default: 'y-30',
+      on: 'y-100',
+    ),
+    dark: (
+      default: 'y-90',
+      on: 'y-20',
+    ),
+  ),
+  success-contrast: (
+    light: (
+      default: 'g-30',
+      on: 'g-100',
+    ),
+    dark: (
+      default: 'g-80',
+      on: 'g-15',
+    ),
+  ),
+  primary-container: (
+    light: (
+      default: 'c-90',
+      on: 'c-10',
+    ),
+    dark: (
+      default: 'c-20',
+      on: 'c-90',
+    ),
+  ),
+  secondary-container: (
+    light: (
+      default: 't-90',
+      on: 't-10',
+    ),
+    dark: (
+      default: 't-15',
+      on: 't-90',
+    ),
+  ),
+  error-container: (
+    light: (
+      default: 'r-95',
+      on: 'r-20',
+    ),
+    dark: (
+      default: 'r-30',
+      on: 'r-95',
+    ),
+  ),
+  warning-container: (
+    light: (
+      default: 'y-85',
+      on: 'y-10',
+    ),
+    dark: (
+      default: 'y-25',
+      on: 'y-95',
+    ),
+  ),
+  success-container: (
+    light: (
+      default: 'g-90',
+      on: 'g-20',
+    ),
+    dark: (
+      default: 'g-30',
+      on: 'g-95',
+    ),
+  ),
+  surface: (
+    light: (
+      default: 'n-100',
+      on: 'n-10',
+    ),
+    dark: (
+      default: 'n-13',
+      on: 'n-95',
+    ),
+  ),
+  surface-container: (
+    light: (
+      default: 'n-97',
+      on: 'n-10',
+    ),
+    dark: (
+      default: 'n-10',
+      on: 'n-95',
+    ),
+  ),
+  surface-accent: (
+    light: (
+      default: 't-20',
+      bright: 't-30',
+      on: 'n-97',
+    ),
+    dark: (
+      default: 't-15',
+      bright: 't-25',
+      on: 'n-95',
+    ),
+  ),
+  outline: (
+    light: (
+      default: 'n-50',
+      on: 'n-95',
+    ),
+    dark: (
+      default: 'n-70',
+      on: 'n-30',
+    ),
+  ),
+  outline-variant: (
+    light: (
+      default: 'n-90',
+      on: 'n-20',
+    ),
+    dark: (
+      default: 'n-30',
+      on: 'n-95',
+    ),
+  ),
+  label: (
+    light: (
+      default: 'n-50',
+      on: 'n-100',
+    ),
+    dark: (
+      default: 'n-70',
+      on: 'n-30',
+    ),
+  ),
+  label-variant: (
+    light: (
+      default: 'n-70',
+      on: 'n-100',
+    ),
+    dark: (
+      default: 'n-60',
+      on: 'n-20',
+    ),
+  ),
+  disabled: (
+    light: (
+      default: 'n-70',
+      on: 'n-100',
+    ),
+    dark: (
+      default: 'n-30',
+      on: 'n-70',
+    ),
+  ),
+  disabled-container: (
+    light: (
+      default: 'n-90',
+      on: 'n-60',
+    ),
+    dark: (
+      default: 'n-30',
+      on: 'n-70',
+    ),
+  ),
+);
