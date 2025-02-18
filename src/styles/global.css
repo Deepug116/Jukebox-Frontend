@@ -1,0 +1,53 @@
+@import "./breakpoints";
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.admin-overview-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+
+@include media-breakpoint-down(sm) {
+  .admin-overview-container {
+    flex-direction: column;
+    padding: 10px;
+  }
+}
+
+.stat-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+@include media-breakpoint-down(md) {
+  .stat-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .stat-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+@include media-breakpoint-down(sm) {
+  .table-container table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
